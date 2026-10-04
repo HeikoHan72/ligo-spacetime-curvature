@@ -1,4 +1,5 @@
 # LIGO Spacetime Curvature
+[![Tests](https://github.com/HeikoHan72/ligo-spacetime-curvature/actions/workflows/tests.yml/badge.svg)](https://github.com/HeikoHan72/ligo-spacetime-curvature/actions/workflows/tests.yml)
 
 Computes the spacetime curvature of the first detected gravitational wave,
 GW150914, directly from the LIGO strain data of both detectors and visualises it
@@ -98,7 +99,7 @@ classification, as in Gravity Spy, is needed.
 ## Quick start
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/HeikoHan72/ligo-spacetime-curvature.git
 cd ligo-spacetime-curvature
 pip install -r requirements.txt
 python -m ligo_spacetime               # everything, about 25 s
