@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ligo-spacetime-curvature"
+version = "0.3.0"
+description = "Spacetime curvature of GW150914 from LIGO strain data, plus a Gravity Spy glitch analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "h5py>=3.8",
+    "astropy>=5.3",
+    "pillow>=10.0",
+]
+
+[project.scripts]
+ligo-spacetime = "ligo_spacetime.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["ligo_spacetime*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
