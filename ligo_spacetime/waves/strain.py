@@ -31,7 +31,7 @@ class Strain:
         """GPS time of every sample."""
         return self.gps_start + np.arange(len(self.values)) * self.dt
 
-    def with_values(self, values: np.ndarray) -> "Strain":
+    def with_values(self, values: np.ndarray) -> Strain:
         return replace(self, values=values)
 
 

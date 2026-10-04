@@ -40,7 +40,7 @@ def _symmetric_norm(values: np.ndarray) -> colors.Normalize:
 def plot_spectrogram(result: EventResult, path: Path) -> Path:
     style.apply_style()
     fig, axes = plt.subplots(1, 2, figsize=(11, 4), sharey=True)
-    for ax, (ifo, det) in zip(axes, result.detectors.items()):
+    for ax, (ifo, det) in zip(axes, result.detectors.items(), strict=True):
         white = processing.whiten(det.raw)
         freqs, seg_times, power = signal.spectrogram(
             white.values, fs=white.fs, nperseg=256, noverlap=240, window="hann"
@@ -139,7 +139,7 @@ def plot_transverse_grid(
     lines = np.linspace(-1, 1, 11)
     fine = np.linspace(-1, 1, 60)
     fig, axes = plt.subplots(1, n_snapshots, figsize=(2.6 * n_snapshots, 3.5))
-    for ax, t_i, h_i, r_i in zip(axes, times, h_at, r_at):
+    for ax, t_i, h_i, r_i in zip(axes, times, h_at, r_at, strict=True):
         colour = plt.get_cmap(style.CMAP)(r_norm(r_i))
         segments = []
         for value in lines:  # lines of constant x and constant y
