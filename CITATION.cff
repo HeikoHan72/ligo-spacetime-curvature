@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "LIGO Spacetime Curvature"
+abstract: "Computes the spacetime curvature of GW150914 from real LIGO strain data (H1/L1) and shows it as a distorted grid, plus a Gravity Spy glitch analysis."
+authors:
+  - family-names: "Han"
+    given-names: "Heiko"
+version: 0.3.0
+date-released: "2026-10-04"
+license: MIT
+repository-code: "https://github.com/HeikoHan72/ligo-spacetime-curvature"
+keywords:
+  - gravitational waves
+  - LIGO
+  - GW150914
+  - Gravity Spy
+  - spacetime curvature
