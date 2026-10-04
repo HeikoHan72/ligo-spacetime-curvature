@@ -120,10 +120,27 @@ ligo_spacetime/
     glitches/          Gravity Spy: loading, features, class profiles
     viz/               figures and animation
     __main__.py        command line interface
+scripts/               step-by-step walkthrough scripts (Spyder cells, German comments)
 tests/                 30 tests: physics checks, synthetic signals, real data
 figures/               generated images used in this README
 data/                  input data, see data/README.md
 ```
+
+## Walkthrough scripts
+
+The `scripts/` folder rebuilds the pipeline step by step. Each script is split into
+`# %%` cells (run cell by cell in Spyder or VS Code, or as a whole with
+`python scripts/<name>.py`) and, where possible, checks its hand-written result against the package
+function. Comments are in German.
+
+| Script | Content |
+|---|---|
+| `01_daten_laden.py` | HDF5 structure, data quality mask, raw strain |
+| `02_filtern.py` | Noise spectrum, Tukey window, band-pass built by hand, check against `processing.bandpass` |
+| `03_kruemmung.py` | Spectral second derivative, curvature, comparison with finite differences |
+| `04_zeitverzoegerung.py` | Cross-correlation by hand, H1/L1 delay and inversion, light-travel check |
+| `05_gitter.py` | Geodesic-deviation grid at several times, plane-wave snapshot |
+| `06_glitches.py` | Gravity Spy: quality, UTC conversion, features, class profiles, GW150914 vs. glitches |
 
 ## Gravity Spy glitch analysis
 
